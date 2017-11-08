@@ -1,8 +1,9 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\graphicspath{{./Figures/}}
-     
+\graphicspath{{./Figures/}}\usepackage{algorithm}
+\usepackage{ amssymb }
+\usepackage[noend]{algpseudocode}
 \title{Report Title}
 \author{Your Name here}
 \date{\today}
@@ -72,6 +73,38 @@ E=m
     \hline
    \end{tabular}
    \end{center}
+\subsection{Algorithm}
+\begin{algorithm}
+    \caption{Artificial Neural Network Training Algorithm, modified from (Reed, 1999)}\label{euclid}
+    \begin{algorithmic}[1]
+    \Procedure{Froward Propogation}{}
+    \State $\alpha^{l+1}=f(z^{l+1})$
+    \State $\alpha^{l+1}=f(z^{l+1})$
+    \EndProcedure
+    \Procedure{Calculate Loss Function}{}
+    \State $\alpha^{l+1}=f(z^{l+1})$
+    \EndProcedure
+    \Procedure{Backpropogation}{}
+    \State $calculate~partial ~derivatives~ of~ output~ layer$
+    \State $\delta_l=\frac{\partial}{\partial z_i^l}\frac{1}{2} \|h_{w,b}(x)-y\|^2=-(y_i-a_i^l)f'(z_i^l)$
+    \State $calculate ~partial~ derivatives~ of~ hidden~ layers~and~update~weights$
+    \State $for ~j=l-1;j>=2;j--$
+    \State $\delta_l=\frac{\partial}{\partial z_i^l}\frac{1}{2} \|h_{w,b}(x)-y\|^2=-(y_i-a_i^l)f'(z_i^l)$
+    \State $\delta_l=\frac{\partial}{\partial z_i^l}\frac{1}{2} \|h_{w,b}(x)-y\|^2=-(y_i-a_i^l)f'(z_i^l)p $
+    \State $\delta_l=\frac{\partial}{\partial z_i^l}\frac{1}{2} \|h_{w,b}(x)-y\|^2=-(y_i-a_i^l)f'(z_i^l)$
+    \State $end ~for$
+    \EndProcedure
+    \end{algorithmic}
+    \end{algorithm}
+\subsection{Minipage}
+\begin{minipage}{.5\textwidth}
+        \includegraphics[width=4cm]{gg}
+        \label{fig:gg}
+  \end{minipage}% This must go next to `\end{minipage}`
+  \begin{minipage}{.5\textwidth}
+        \includegraphics[width=8cm]{cps}
+        \label{fig:svg}
+  \end{minipage}
 \subsection{useful links}
 Detect hand writing math symbols\\
 http://detexify.kirelabs.org/classify.html\\
